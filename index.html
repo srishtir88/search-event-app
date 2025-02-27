@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communities and Justice</title>
+    <link rel="stylesheet" href="styles/search-event.css">
+</head>
+<body>
+    <header role="banner" style="padding: 0.5rem 0rem">
+        <div class="header-wrapper">
+            <h1>Department of Communities and Justice</h1>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="search-section" role="search" aria-labelledby="search-heading">
+            <h2 id="search-heading" class="font-xxl">Search Events</h2>
+            <form id="search-form" role="search" aria-label="Event search form" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="name-search" class="font-l">Event Name:</label>
+                    <input 
+                        type="search" 
+                        id="name-search" 
+                        name="name-search"
+                        placeholder="Enter event name (e.g., Wellness and Pamper)" 
+                        aria-describedby="name-desc">
+                    <span id="name-desc" class="visually-hidden">Enter an event name to filter the events list</span>
+                </div>
+                <div class="form-group">
+                    <label for="date-search" class="font-l">Event Date:</label>
+                    <input 
+                        type="date" 
+                        id="date-search" 
+                        name="date-search"
+                        aria-label="Search by event date"
+                        aria-describedby="date-desc">
+                    <span id="date-desc" class="visually-hidden">Select a date to filter events on that day. Use format DD/MM/YYYY</span>
+                </div>
+            </form>
+        </section>
+
+        <section class="results-section" aria-labelledby="results-heading">
+            <h2 id="results-heading" class="visually-hidden">Event Results</h2>
+            <div id="event-list" class="event-grid" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="event-card.js"></script>
+</body>
+</html>
+

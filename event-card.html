@@ -1,0 +1,37 @@
+<article class="event-card" 
+        aria-labelledby="event-title-${id}" 
+        tabindex="0" 
+        role="button"
+        onkeydown="handleKeydown(event)">
+    <div class="card">
+        <header>
+            <h3 id="event-title-${id}" class="event-title font-xl"></h3>
+
+            <div class="date-location font-sm text-muted">
+                <div class="date-wrapper" role="group" aria-label="Event date">
+                    <img src="./images/time-and-date.png" alt="Calendar icon" class="date-icon">
+                    <time class="event-date" datetime="" aria-label=""></time>
+                </div>
+
+                <div class="location-wrapper" role="group" aria-label="Event location">
+                    <div class="location-container">
+                        <img src="images/pin.png" alt="Location pin icon" class="location-pin">
+                        <span class="event-location"></span>, 
+                        <span class="event-district"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="event-content">
+            <p class="event-description font-md prominent-text"></p>
+        </div>
+
+        <footer>
+            <hr class="org-divider" aria-hidden="true">
+            <p class="event-organisation font-sm">
+                <span class="org-name"></span>
+            </p>
+        </footer>
+    </div>
+</article>
